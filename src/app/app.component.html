@@ -26,3 +26,21 @@
 <p>
   {{ persona.address.calle }}
 </p>
+<br>
+<button [disabled]='banderaBoton'>Presiona</button>
+<br>
+<button (click)="toggleButton()">
+  deshabilitar
+</button>
+<br><br>
+<!-- aumentar edad -->
+<h2>
+  Edad {{ age }}
+</h2>
+<button (click)="increaseAge()">
+  Aumentar Edad
+</button>
+<!-- tambien aumenta progress bar por que apunta la edad -->
+<br>
+<progress max="100" [value]="age"></progress>
+

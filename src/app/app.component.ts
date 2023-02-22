@@ -21,4 +21,15 @@ export class AppComponent {
       numero:19
     }
   }
+
+  banderaBoton = true;
+  //cambiare el estado de los botones
+  toggleButton(){
+    this.banderaBoton = !this.banderaBoton; // negar el valor boolerano q tenga en ese momento
+  }
+
+  //aumentar Edad
+  increaseAge(){
+    this.age = this.age + 1
+  }
 }
