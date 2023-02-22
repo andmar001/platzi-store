@@ -1,0 +1,7 @@
+.box{
+  height: 200px;
+  width: 200px;
+  /* see the scroll option  */
+  overflow: auto;
+  background-color: rgb(209, 155, 155);
+}

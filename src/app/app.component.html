@@ -43,4 +43,11 @@
 <!-- tambien aumenta progress bar por que apunta la edad -->
 <br>
 <progress max="100" [value]="age"></progress>
-
+<br>
+<div class="box" (scroll)="onScroll($event)">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum nobis dolores necessitatibus, tempora quas, ipsam provident, nam esse doloremque atque obcaecati? Velit totam impedit ut exercitationem excepturi, minima, perspiciatis at suscipit vitae assumenda doloremque fugiat ipsam possimus recusandae pariatur tempora et adipisci sunt provident expedita nesciunt mollitia. Ipsum excepturi recusandae error? Itaque fugiat obcaecati, incidunt consequatur nulla minima error in quibusdam neque placeat vitae ad consequuntur aliquam dolor commodi impedit perferendis nobis voluptatum, iure dolorem sunt fuga vero iste porro. Culpa ea ratione id modi, eveniet ullam! Quasi, voluptatum neque veniam, tenetur expedita placeat assumenda nesciunt nam doloribus asperiores voluptatem.
+</div>
+<br>
+<p>Nombre {{ persona.name }}</p>
+<!-- evento keyup cada que se teclea sobre un input  -->
+<input type="text" [value]="persona.name" (keyup)="changeName($event)">
