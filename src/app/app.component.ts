@@ -9,4 +9,8 @@ export class AppComponent {
 
   imgParent :string = 'https://www.w3schools.com/howto/img_avatar.png'
 
+
+  onLoaded(img:string){
+    console.log("Log padre", img)
+  }
 }
