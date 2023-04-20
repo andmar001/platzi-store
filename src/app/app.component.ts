@@ -9,6 +9,8 @@ import { IProducto } from './models/product.model';
 export class AppComponent {
   imgParent: string = 'https://www.w3schools.com/howto/img_avatar.png';
 
+  showImg = true;
+
   products: IProducto[] = [
     {
       id: '1',
@@ -56,5 +58,9 @@ export class AppComponent {
 
   onLoaded(img: string) {
     console.log('Log padre', img);
+  }
+
+  toggleImg(){
+    this.showImg = !this.showImg;
   }
 }
