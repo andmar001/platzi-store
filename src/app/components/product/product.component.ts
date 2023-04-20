@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IProducto } from 'src/app/models/product.model';
 
 @Component({
@@ -8,10 +8,10 @@ import { IProducto } from 'src/app/models/product.model';
 })
 export class ProductComponent {
 
-  product :IProducto = {
-    id:"1",
-    name:"producto 1",
-    image:"../../assets/img/iphone.jpg",
-    price:10
+  @Input() product :IProducto = {
+    id:"",
+    name:"",
+    image:"",
+    price:0
   }
 }
