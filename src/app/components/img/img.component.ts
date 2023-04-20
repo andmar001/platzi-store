@@ -7,7 +7,16 @@ import { Component, Input, OnInit, Output, EventEmitter, OnChanges, SimpleChange
 })
 export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy{
 
-  @Input() img: string = "valor inicial";
+  img:string = ''
+
+  //setear valores de la imagen
+  @Input('img')
+  set changeImg(newImg:string){
+    this.img = newImg
+    console.log("change just image", this.img)
+  }
+
+  @Input() alt: string = "";
 
   @Output() loaded = new EventEmitter<string>();
 
@@ -24,10 +33,11 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
     console.log("constructor called =>", this.img);
   }
 
-  ngOnChanges(): void {
+  ngOnChanges( changes:SimpleChanges): void {
     // before render - during the render
     //cambios en los inputs - se ejecuta las veces q se actualizen los inputs que definamos
     console.log("on changes => imgValue", this.img)
+    console.log("changes => ",changes)
 
   }
   ngOnInit(): void {
